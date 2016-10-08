@@ -1,0 +1,1 @@
+FROM hyperledger/fabric-peer
