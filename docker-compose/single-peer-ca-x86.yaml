@@ -1,11 +1,12 @@
 membersrvc:
-  image: hyperledger/fabric-membersrvc:x86_64-0.6.0-preview
+  image: hyperledger/${ARCH_MEMSVC}
   extends:
     file: base/membersrvc.yaml
     service: membersrvc
 
 vp:
-  image: hyperledger/fabric-peer:x86_64-0.6.0-preview
+ # image: hyperledger/fabric-peer:x86_64-0.6.0-preview
+  image: hyperledger/${ARCH_PEER}
   extends:
     file: base/peer-secure-base.yaml
     service: peer-secure-base

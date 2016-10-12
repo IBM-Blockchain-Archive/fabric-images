@@ -1,11 +1,11 @@
 membersrvc:
-  image: hyperledger/fabric-membersrvc:x86_64-0.6.0-preview
+  image: hyperledger/${ARCH_MEMSVC}
   extends:
     file: base/membersrvc.yaml
     service: membersrvc
 
 vp0:
-  image: hyperledger/fabric-peer:x86_64-0.6.0-preview
+  image: hyperledger/${ARCH_PEER}
   extends:
     file: base/peer-secure-pbft-base.yaml
     service: peer-secure-pbft-base
@@ -21,7 +21,7 @@ vp0:
     - membersrvc
 
 vp1:
-  image: hyperledger/fabric-peer:x86_64-0.6.0-preview
+  image: hyperledger/${ARCH_PEER}
   extends:
     file: base/peer-secure-pbft-base.yaml
     service: peer-secure-pbft-base
@@ -39,7 +39,7 @@ vp1:
     - vp0
 
 vp2:
-  image: hyperledger/fabric-peer:x86_64-0.6.0-preview
+  image: hyperledger/${ARCH_PEER}
   extends:
     file: base/peer-secure-pbft-base.yaml
     service: peer-secure-pbft-base
@@ -57,7 +57,7 @@ vp2:
     - vp0
 
 vp3:
-  image: hyperledger/fabric-peer:x86_64-0.6.0-preview
+  image: hyperledger/${ARCH_PEER}
   extends:
     file: base/peer-secure-pbft-base.yaml
     service: peer-secure-pbft-base
