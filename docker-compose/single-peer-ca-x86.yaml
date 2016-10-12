@@ -1,0 +1,18 @@
+membersrvc:
+  image: hyperledger/fabric-membersrvc:x86_64-0.6.0-preview
+  extends:
+    file: base/membersrvc.yaml
+    service: membersrvc
+
+vp:
+  image: hyperledger/fabric-peer:x86_64-0.6.0-preview
+  extends:
+    file: base/peer-secure-base.yaml
+    service: peer-secure-base
+  environment:
+    - CORE_PEER_ID=vp
+    - CORE_SECURITY_ENROLLID=vp
+    - CORE_SECURITY_ENROLLSECRET=f3489fy98ghf
+  links:
+    - membersrvc
+
