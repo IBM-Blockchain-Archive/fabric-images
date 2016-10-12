@@ -1,0 +1,17 @@
+peer-secure-pbft-base:
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  environment:
+    - CORE_PEER_DISCOVERY_PERIOD=60s
+    - CORE_PEER_DISCOVERY_TOUCHPERIOD=61s
+    - CORE_PEER_ADDRESSAUTODETECT=true
+    - CORE_VM_ENDPOINT= unix:///var/run/docker.sock
+    - CORE_LOGGING_LEVEL=DEBUG
+    - CORE_PEER_PKI_ECA_PADDR=membersrvc:7054
+    - CORE_PEER_PKI_TCA_PADDR=membersrvc:7054
+    - CORE_PEER_PKI_TLSCA_PADDR=membersrvc:7054
+    - CORE_SECURITY_ENABLED=true
+    - CORE_PEER_VALIDATOR_CONSENSUS_PLUGIN=pbft 
+    - CORE_OBCPBFT_GENERAL_MODE=batch 
+    - CORE_OBCPBFT_GENERAL_N=4 
+  command: sh -c "sleep 10; peer node start"
