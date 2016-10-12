@@ -35,6 +35,7 @@ vp1:
     - CORE_SECURITY_ENROLLID=test_vp1
     - CORE_SECURITY_ENROLLSECRET=5wgHK9qqYaPy
   links:
+    - membersrvc
     - vp0
 
 vp2:
@@ -52,6 +53,7 @@ vp2:
     - CORE_SECURITY_ENROLLID=test_vp2
     - CORE_SECURITY_ENROLLSECRET=vQelbRvja7cJ
   links:
+    - membersrvc
     - vp0
 
 vp3:
@@ -69,5 +71,6 @@ vp3:
     - CORE_SECURITY_ENROLLID=test_vp3
     - CORE_SECURITY_ENROLLSECRET=9LKqKH5peurL
   links:
+    - membersrvc
     - vp0
 
