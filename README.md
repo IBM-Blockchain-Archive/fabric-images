@@ -189,10 +189,10 @@ docker start <containerID>
 docker stop <containerID>
 ```
 9. View network settings for a specific container:
-```
-docker inspect <containerID>
 
-  ```
+   ```
+docker inspect <containerID>
+```
 10. View logs for a specific containerID:
 
   ```
