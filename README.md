@@ -149,43 +149,53 @@ peer chaincode query -u test_user0 -n ee5b24a1f17c356dd5f6e37307922e39ddba12e5d2
 ## Helpful Docker commands
 
 1. View running containers:
-```
+
+  ```
 docker ps
 ```
 2. View all containers (active and non-active):
-```
+
+  ```
 docker ps -a
 ```
 3. Stop all Docker containers:
-```
+
+  ```
 docker stop $(docker ps -a -q)
 ```
 4. Remove all containers.  Adding the `-f` will issue a "force" removal:
-```
+
+  ```
 docker rm -f $(docker ps -aq)
 ```
 5. Remove all images:
-```
+
+  ```
 docker rmi -f $(docker images -q)
 ```
 6. Remove all images except for hyperledger/fabric-baseimage:
-```
+
+  ```
 docker rmi $(docker images | grep -v 'hyperledger/fabric-baseimage:latest' | awk {'print $3'})
 ```
 7. Start a container:
-```
+
+  ```
 docker start <containerID>
 ```
 8. Stop a containerID:
-```
+
+  ```
 docker stop <containerID>
 ```
 9. View network settings for a specific container:
 ```
 docker inspect <containerID>
-```
+
+  ```
 10. View logs for a specific containerID:
-```
+
+  ```
 docker logs -f <containerID>
 ```
 
