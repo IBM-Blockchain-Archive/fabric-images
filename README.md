@@ -25,21 +25,25 @@ Ensure that you have Docker for [Mac](https://docs.docker.com/engine/installatio
 ## Getting Started and using Docker Compose
 
 1. The docker compose files and configurations are located in GitHub.  If you do not have Git installed, download the appropriate [Git client](https://git-scm.com/downloads) for your OS.  Now clone the repository:
-```
+
+   ```
 git clone https://github.com/IBM-Blockchain/fabric-images.git
 ```
 2. Go into the docker-compose directory:
-```
+
+   ```
 cd fabric-images/docker-compose
 ```
 3. Set the environment by executing the setenv.sh script:
-```
+
+   ```
 . setenv.sh
 ```
-4. If you wish to configure your network by changing environment variables or customizing port mapping, skip below to the **Configuration Considerations** section.  If you want to run with the default settings, proceed to the next step.
+4. If you wish to configure your network by changing environment variables or customizing port mapping, skip below to the __Configuration Considerations__ section.  If you want to run with the default settings, proceed to the next step.
 
 5. Run one of the two docker compose files, single-peer-ca.yaml or four-peer-ca.yaml.  For example:
-```
+
+   ```
 docker-compose -f four-peer-ca.yaml up
 ```  
 
