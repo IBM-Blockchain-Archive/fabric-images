@@ -1,23 +1,24 @@
-membersrvc:
-  image: hyperledger/${ARCH_MEMSVC}
-  extends:
-    file: base/membersrvc.yaml
-    service: membersrvc
+version: '2'
+services:
+  membersrvc:
+    image: hyperledger/fabric-membersrvc:${ARCH_TAG}
+    extends:
+      file: base/membersrvc.yaml
+      service: membersrvc
 
-vp:
- # image: hyperledger/fabric-peer:x86_64-0.6.0-preview
-  image: hyperledger/${ARCH_PEER}
-  extends:
-    file: base/peer-secure-base.yaml
-    service: peer-secure-base
-  ports:
-    - "7050:7050"
-    - "7051:7051"
-    - "7053:7053"
-  environment:
-    - CORE_PEER_ID=vp0
-    - CORE_SECURITY_ENROLLID=vp
-    - CORE_SECURITY_ENROLLSECRET=f3489fy98ghf
-  links:
-    - membersrvc
+  vp:
+    image: hyperledger/fabric-peer:${ARCH_TAG}
+    extends:
+      file: base/peer-secure-base.yaml
+      service: peer-secure-base
+    ports:
+      - "7050:7050"
+      - "7051:7051"
+      - "7053:7053"
+    environment:
+      - CORE_PEER_ID=vp0
+      - CORE_SECURITY_ENROLLID=vp
+      - CORE_SECURITY_ENROLLSECRET=f3489fy98ghf
+    links:
+      - membersrvc
 
