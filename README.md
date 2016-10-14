@@ -1,6 +1,10 @@
 # fabric-images
 
-This repository contains the Docker images and Docker Compose files for running the Hyperledger fabric
+This repository contains the Docker images and Docker Compose files for running the Hyperledger fabric.
+
+## Disclaimer
+
+The architecture behind IBM Blockchain is the Linux Foundation's Hyperledger Project. Hyperledger fabric is an open source project under active development, currently in *Incubation* status. Each code contribution from the open source community makes Hyperledger fabric more robust, but can present adoption challenges. During the *Incubation* cycle, clients can use Hyperledger fabric for network testing and simulation. IBM does offer support for blockchain networks running on signed Docker images, but cautions against running financial assets of value directly on a Hyperledger fabric v0.6 blockchain network.
 
 ## Using your Docker Images
 
