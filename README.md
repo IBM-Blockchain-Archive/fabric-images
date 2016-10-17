@@ -12,7 +12,7 @@ These images provide you with a self-contained local blockchain environment runn
 
 ## Platform
 
-The images for the membership services (CA) and peer have been built for the intel (x86), power (ppc64le), and LinuxONE (s390x) platforms
+The images for the membership services (CA) and peer have been built for the intel (x86), power (ppc64le), and LinuxONE or z Systems (s390x) platforms
 
 ## Supported configurations
 
