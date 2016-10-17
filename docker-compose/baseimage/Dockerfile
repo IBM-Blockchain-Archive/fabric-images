@@ -1,1 +1,3 @@
-FROM hyperledger/fabric-baseimage:${ARCH_TAG}
+FROM ubuntu
+ARG base
+ONBUILD ADD hyperledger/fabric-baseimage:$base
