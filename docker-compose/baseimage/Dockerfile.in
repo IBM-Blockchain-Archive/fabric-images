@@ -1,1 +1,1 @@
-FROM hyperledger/fabric-peer:_ARCH_TAG_
+FROM ibmblockchain/fabric-peer:_ARCH_TAG_
