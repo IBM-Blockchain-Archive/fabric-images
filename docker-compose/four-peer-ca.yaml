@@ -1,11 +1,5 @@
 version: '2'
 services:
-  baseimage:
-    build:
-      context: ./baseimage
-      args:
-        base: ${BASE_TAG}
-    image: hyperledger/fabric-baseimage:latest
 
   membersrvc:
     image: hyperledger/fabric-membersrvc:${ARCH_TAG}
