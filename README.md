@@ -12,7 +12,7 @@ These images provide you with a self-contained local blockchain environment runn
 
 ## Platform
 
-The images for the membership services (CA) and peer have been built for the Intel (x86), Power (ppc64le), and LinuxONE or z Systems (s390x) platforms
+The images for the membership services (CA) and peer have been built for the Intel (x86), Power (ppc64le), and [LinuxONE](docs/LinuxONE.md) or z Systems (s390x) platforms
 
 ## Supported configurations
 
@@ -20,7 +20,7 @@ The default configurations for each network (single node and four node) have bee
 
 ## Prerequisites
 
-Ensure that you have Docker for [Mac](https://docs.docker.com/engine/installation/mac/),  [Windows](https://docs.docker.com/engine/installation/windows/) or [Linux](https://docs.docker.com/engine/installation/#/on-linux) 1.12 or higher properly installed on your machine.  You must also have [Docker Compose](https://docs.docker.com/compose/install/) 1.7 or higher installed.   
+Ensure that you have Docker 1.12 or higher for [Mac](https://docs.docker.com/engine/installation/mac/),  [Windows](https://docs.docker.com/engine/installation/windows/) or [Linux](https://docs.docker.com/engine/installation/#/on-linux) properly installed on your machine.  You must also have [Docker Compose](https://docs.docker.com/compose/install/) 1.7 or higher installed.   
 
 ## Pulling the images
 
