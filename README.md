@@ -1,6 +1,6 @@
-# fabric-images
+# Fabric Images
 
-This repository contains the Docker images and Docker Compose files for running the Hyperledger fabric.
+This repository contains the IBM-signed Docker images and Docker-Compose files for running the Hyperledger fabric.  These images have been tested for functionality, stability and performance across the available platforms, and a dedicated support team within IBM is available to help resolve code defects or configuration issues for networks running supported configurations against Hyperledger fabric code.  Visit the [IBM Blockchain Support](http://www-stage.watson.ibm.com/files/blockchain/hyperledger-fabric-support.html) page for more information on obtaining support for your local network.
 
 ## Disclaimer
 
@@ -102,6 +102,10 @@ docker-compose -f <composefile> up -d
 ```
 
 This will take a few minutes the first time this command is issued; the images have to be downloaded and extracted onto your local machine.
+
+## How to write chaincode
+
+You have the option of either deploying sample chaincode to your blockchain network, or developing your own original code.  If you are interested in developing some organic Go code, use the IBM-Blockchain [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) repository as a starting point.  This repo will teach you the major chaincode functions, and then guide you through the construction and implementation of a simple piece of Go code.  Once constructed, you will compile your code, deploy it to a blockchain network, and then issue invocation transactions.  If you are already familiar with the basic tenets of Hyperledger fabric and chaincode, then skip to the next section.  
 
 ## Testing and verifying your local network
 
@@ -211,4 +215,4 @@ docker logs -f <containerID>
 
 ## Getting support
 
-IBM offers support for the single node and four node Docker networks running against the default configurations.  Visit the [support](link here) page to learn more about the pricing structure and specific support offerings.  
+IBM offers support for the single node and four node Docker networks running against the default configurations.  Visit the [Hyperledger fabric support](http://www-stage.watson.ibm.com/files/blockchain/hyperledger-fabric-support.html) page to learn more about the pricing structure and specific support offerings.  
