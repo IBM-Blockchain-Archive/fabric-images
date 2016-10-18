@@ -1,13 +1,17 @@
 version: '2'
 services:
+  baseimage:
+    build: ./baseimage
+    image: hyperledger/fabric-baseimage:latest
+
   membersrvc:
-    image: hyperledger/fabric-membersrvc:${ARCH_TAG}
+    image: ibmblockchain/fabric-membersrvc:${ARCH_TAG}
     extends:
       file: base/membersrvc.yaml
       service: membersrvc
 
   vp:
-    image: hyperledger/fabric-peer:${ARCH_TAG}
+    image: ibmblockchain/fabric-peer:${ARCH_TAG}
     extends:
       file: base/peer-secure-base.yaml
       service: peer-secure-base

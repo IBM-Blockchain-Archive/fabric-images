@@ -5,13 +5,13 @@ services:
     image: hyperledger/fabric-baseimage:latest
 
   membersrvc:
-    image: hyperledger/fabric-membersrvc:${ARCH_TAG}
+    image: ibmblockchain/fabric-membersrvc:${ARCH_TAG}
     extends:
       file: base/membersrvc.yaml
       service: membersrvc
 
   vp0:
-    image: hyperledger/fabric-peer:${ARCH_TAG}
+    image: ibmblockchain/fabric-peer:${ARCH_TAG}
     extends:
       file: base/peer-secure-pbft-base.yaml
       service: peer-secure-pbft-base
@@ -27,7 +27,7 @@ services:
       - membersrvc
 
   vp1:
-    image: hyperledger/fabric-peer:${ARCH_TAG}
+    image: ibmblockchain/fabric-peer:${ARCH_TAG}
     extends:
       file: base/peer-secure-pbft-base.yaml
       service: peer-secure-pbft-base
@@ -45,7 +45,7 @@ services:
       - vp0
 
   vp2:
-    image: hyperledger/fabric-peer:${ARCH_TAG}
+    image: ibmblockchain/fabric-peer:${ARCH_TAG}
     extends:
       file: base/peer-secure-pbft-base.yaml
       service: peer-secure-pbft-base
@@ -63,7 +63,7 @@ services:
       - vp0
 
   vp3:
-    image: hyperledger/fabric-peer:${ARCH_TAG}
+    image: ibmblockchain/fabric-peer:${ARCH_TAG}
     extends:
       file: base/peer-secure-pbft-base.yaml
       service: peer-secure-pbft-base
