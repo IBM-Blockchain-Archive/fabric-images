@@ -1,5 +1,3 @@
-version: '2'
-services:
   membersrvc:
     image: hyperledger/fabric-membersrvc:${ARCH_TAG}
     extends:

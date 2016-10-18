@@ -1,5 +1,3 @@
-version: '2'
-services:
   peer-secure-pbft-base:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

@@ -1,5 +1,3 @@
-version: '2'
-services:
   membersrvc:
     ports:
     - "7054:7054"

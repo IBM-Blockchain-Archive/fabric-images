@@ -23,8 +23,8 @@ if [ $? -ne 0 ]; then
    echo "docker pull failed to peer image"
    return 
 fi
-docker tag hyperledger/fabric-peer:${ARCH_TAG} hyperledger/fabric-baseimage:latest
 
+docker tag hyperledger/fabric-peer:${ARCH_TAG} hyperledger/fabric-baseimage:latest
 if [ $? -ne 0 ]; then
    echo "docker tag failed"
    return
