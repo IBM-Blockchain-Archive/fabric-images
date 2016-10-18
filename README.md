@@ -1,6 +1,6 @@
 # Fabric Images
 
-This repository contains the IBM-signed Docker images and Docker-Compose files for running the Hyperledger fabric.  These images have been tested for functionality, stability and performance across the available platforms, and a dedicated support team within IBM is available to help resolve code defects or configuration issues for networks running supported configurations against Hyperledger fabric code.  Visit the [IBM Blockchain Support](http://www-stage.watson.ibm.com/files/blockchain/hyperledger-fabric-support.html) page for more information on obtaining support for your local network.
+This repository contains the IBM-signed Docker images and Docker Compose files for running the Hyperledger fabric.  These images have been tested for functionality, stability and performance across the available platforms, and a dedicated support team within IBM is available to help resolve code defects or configuration issues for networks running supported configurations against Hyperledger fabric code.  Visit the [IBM Blockchain Support](http://www-stage.watson.ibm.com/files/blockchain/hyperledger-fabric-support.html) page for more information on obtaining support for your local network.
 
 ## Disclaimer
 
@@ -12,7 +12,7 @@ These images provide you with a self-contained local blockchain environment runn
 
 ## Platform
 
-The images for the membership services (CA) and peer have been built for the intel (x86), power (ppc64le), and LinuxONE or z Systems (s390x) platforms
+The images for the membership services (CA) and peer have been built for the Intel (x86), Power (ppc64le), and LinuxONE or z Systems (s390x) platforms
 
 ## Supported configurations
 
@@ -20,11 +20,11 @@ The default configurations for each network (single node and four node) have bee
 
 ## Prerequisites
 
-Ensure that you have Docker for [Mac](https://docs.docker.com/engine/installation/mac/),  [Windows](https://docs.docker.com/engine/installation/windows/) or [Linux](https://docs.docker.com/engine/installation/#/on-linux) 1.12 or higher properly installed on your machine.  You must also have [Docker Compose](https://docs.docker.com/compose/install/) installed.   
+Ensure that you have Docker for [Mac](https://docs.docker.com/engine/installation/mac/),  [Windows](https://docs.docker.com/engine/installation/windows/) or [Linux](https://docs.docker.com/engine/installation/#/on-linux) 1.12 or higher properly installed on your machine.  You must also have [Docker Compose](https://docs.docker.com/compose/install/) 1.7 or higher installed.   
 
 ## Pulling the Images
 
-[Docker Compose](https://docs.docker.com/compose/) will be used to run the images and spin up your local environment.  By using docker compose, you don't need to execute a `docker pull` command to retrieve the images.  The images are specified in the docker-compose.yml file and will download automatically when you ultimately execute the `docker-compose` command.
+[Docker Compose](https://docs.docker.com/compose/) will be used to run the images and spin up your local environment.  By using Docker Compose, you don't need to execute a `docker pull` command to retrieve the images.  The images are specified in the docker-compose.yml file and will download automatically when you ultimately execute the `docker-compose` command.
 
 ## Getting Started and using Docker Compose
 
