@@ -20,7 +20,40 @@ The default configurations for each network (single node and four node) have bee
 
 ## Prerequisites
 
-Ensure that you have Docker for [Mac](https://docs.docker.com/engine/installation/mac/),  [Windows](https://docs.docker.com/engine/installation/windows/) or [Linux](https://docs.docker.com/engine/installation/#/on-linux) 1.12 or higher properly installed on your machine.  You must also have [Docker Compose](https://docs.docker.com/compose/install/) 1.7 or higher installed.   
+Ensure that you have Docker for [Mac](https://docs.docker.com/engine/installation/mac/),  [Windows](https://docs.docker.com/engine/installation/windows/) or [Linux](https://docs.docker.com/engine/installation/#/on-linux) 1.12 or higher properly installed on your machine.  You must also have [Docker Compose](https://docs.docker.com/compose/install/) 1.7 or higher installed.  If you are running on Power, please ensure that you also have the [Ubuntu 16.04](http://releases.ubuntu.com/16.04/) image installed.
+
+If you are running on Power and want to install the Docker prerequisites from your terminal:
+  ```
+apt-get install docker.io
+```
+then
+  ```
+pip install docker-compose
+```
+
+If you are running your Docker containers within a vagrant environment and need to upgrade your Docker Compose version:
+
+1. Login to root in vagrant
+2. Ensure you have the [cURL](https://curl.haxx.se/download.html) tool installed.  Then:
+
+  ```
+curl -L "https://github.com/docker/compose/releases/download/1.8.0/docker-compose-$(uname -s)-$(uname -m)" > /usr/local/bin/docker-compose
+```
+3. Make the file an executable:
+
+  ```
+chmod +x /usr/local/bin/docker-compose
+```
+4. Check version:
+
+  ```
+docker-compose version
+```
+5. Execute your Docker Compose command:
+
+  ```
+docker-compose -f four-peer-ca.yaml up
+```
 
 ## Pulling the images
 
@@ -109,7 +142,7 @@ You have the option of either deploying sample chaincode to your blockchain netw
 
 ## Hyperledger fabric v0.6 release notes
 
-There are new features available and several programming changes have been implemented during the migration from the Hyperledger fabric v0.5 codebase to v0.6.  You will need to update your code accordingly in order for your chaincode to properly function against a v0.6 Hyperledger fabric network.  See the [release notes](gerrit link) in the Hyperledger fabric documentation for more information.  
+There are new features available and several programming changes have been implemented during the migration from the Hyperledger fabric v0.5 codebase to v0.6.  You will need to update your code accordingly in order for your chaincode to properly function against a v0.6 Hyperledger fabric network.  See the [migration notes](https://github.com/IBM-Blockchain/fabric-images/blob/master/v0.6_migration.md) for more details on the programming changes.    
 
 ## Testing and verifying your local network
 
@@ -219,4 +252,4 @@ docker logs -f <containerID>
 
 ## Getting support
 
-IBM offers support for the single node and four node Docker networks running against the default configurations.  Visit the [Hyperledger fabric support](http://www-stage.watson.ibm.com/files/blockchain/hyperledger-fabric-support.html) page to learn more about the pricing structure and specific support offerings.  
+You can use the [Hyperledger slack](https://slack.hyperledger.org/) community as a starting point for any issues with Docker containers and the Hyperledger fabric codebase.  The community contains a breadth of blockchain expertise from IBMers and external developers, and is a great resource for solving issues and debugging fabric code.  A multi-tiered, dedicated technical support offering is also available for IBM clients.  Visit the [Hyperledger fabric support](http://www-stage.watson.ibm.com/files/blockchain/hyperledger-fabric-support.html) page to learn more about connecting with the IBM Blockchain Engagement Team.  
