@@ -35,18 +35,22 @@ If you are running your Docker containers within a vagrant environment and need 
 
 1. Login to root in vagrant
 2. Ensure you have the [cURL](https://curl.haxx.se/download.html) tool installed.  Then:
+
   ```
 curl -L "https://github.com/docker/compose/releases/download/1.8.0/docker-compose-$(uname -s)-$(uname -m)" > /usr/local/bin/docker-compose
 ```
 3. Make the file an executable:
+
   ```
 chmod +x /usr/local/bin/docker-compose
 ```
 4. Check version:
+
   ```
 docker-compose version
 ```
 5. Execute your Docker Compose command:
+
   ```
 docker-compose -f four-peer-ca.yaml up
 ```
