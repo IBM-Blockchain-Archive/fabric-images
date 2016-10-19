@@ -1,6 +1,6 @@
 # Fabric Images
 
-This repository contains the IBM-signed Docker images and Docker Compose files for running the Hyperledger fabric.  These images have been tested for functionality, stability and performance across the available platforms, and a dedicated support team within IBM is available to help resolve code defects or configuration issues for networks running supported configurations against Hyperledger fabric code.  Visit the [IBM Blockchain Support](http://www-stage.watson.ibm.com/files/blockchain/hyperledger-fabric-support.html) page for more information on obtaining support for your local network.
+This repository contains the IBM-signed Docker images and Docker Compose files for running the Hyperledger fabric.  These images have been tested for functionality, stability and performance across the available platforms, and a dedicated support team within IBM is available to help resolve code defects or configuration issues for networks running supported configurations against Hyperledger fabric code.  Visit the [IBM Blockchain Support](http://www.ibm.com/blockchain/contact-expert.html) page for more information on obtaining support for your local network.
 
 ## Disclaimer
 
@@ -252,4 +252,4 @@ docker logs -f <containerID>
 
 ## Getting support
 
-You can use the [Hyperledger slack](https://slack.hyperledger.org/) community as a starting point for any issues with Docker containers and the Hyperledger fabric codebase.  The community contains a breadth of blockchain expertise from IBMers and external developers, and is a great resource for solving issues and debugging fabric code.  A multi-tiered, dedicated technical support offering is also available for IBM clients.  Visit the [Hyperledger fabric support](http://www-stage.watson.ibm.com/files/blockchain/hyperledger-fabric-support.html) page to learn more about connecting with the IBM Blockchain Engagement Team.  
+You can use the [Hyperledger slack](https://slack.hyperledger.org/) community as a starting point for any issues with Docker containers and the Hyperledger fabric codebase.  The community contains a breadth of blockchain expertise from IBMers and external developers, and is a great resource for solving issues and debugging fabric code.  A multi-tiered, dedicated technical support offering is also available for IBM clients.  Visit the [Contact an expert](http://www.ibm.com/blockchain/contact-expert.html) page to learn more about connecting with the IBM Blockchain Engagement Team.  
