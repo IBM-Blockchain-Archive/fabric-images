@@ -1,6 +1,6 @@
 # Fabric Images
 
-This repository contains the IBM-signed Docker images and Docker Compose files for running the Hyperledger fabric.  These images have been tested for functionality, stability and performance across the available platforms, and a dedicated support team within IBM is available to help resolve code defects or configuration issues for networks running supported configurations against Hyperledger fabric code.  Visit the [IBM Blockchain Support](http://www.ibm.com/blockchain/contact-expert.html) page for more information on obtaining support for your local network.
+This repository contains the IBM-signed Docker images and Docker Compose files for running Hyperledger fabric code.  These images have been tested for functionality, stability and performance across the available platforms, and a dedicated support team within IBM is available to help resolve code defects or configuration issues for networks running supported configurations against Hyperledger fabric code.  Visit the [IBM Blockchain Support](http://www.ibm.com/blockchain/contact-expert.html) page for more information on obtaining support for your local network.
 
 ## Disclaimer
 
@@ -8,7 +8,7 @@ The architecture behind IBM Blockchain is the Linux Foundation's Hyperledger Pro
 
 ## Using your Docker images
 
-These images provide you with a self-contained local blockchain environment running on Hyperledger fabric v0.6 code.  There are two configurations available: 1) a single node + CA (certificate authority) network; and 2) a four node + CA network.  The images and configurations have been tested and verified by IBM development, and should not be altered.  IBM offers support for both configurations.  Please see the **Getting Support** section at the bottom of the page for more information.  
+These images provide you with a self-contained local blockchain environment running on Hyperledger fabric v0.6.1-preview code.  There are two configurations available: 1) a single node + CA (certificate authority) network; and 2) a four node + CA network.  The images and configurations have been tested and verified by IBM development, and should not be altered.  IBM offers support for both configurations.  Please see the **Getting Support** section at the bottom of the page for more information.  
 
 ## Platform
 
@@ -31,7 +31,8 @@ then
 pip install docker-compose
 ```
 
-If you are running your Docker containers within a vagrant environment and need to upgrade your Docker Compose version:
+You do not need a vagrant environment in order to run your Docker images.  The images will function on Windows, Linux, and Mac, assuming that the prerequisite Docker versions have been properly installed.  However, if you choose to run your Docker containers within vagrant and need to upgrade your Docker Compose version:
+
 
 1. Login to root in vagrant
 2. Ensure you have the [cURL](https://curl.haxx.se/download.html) tool installed.  Then:
@@ -49,11 +50,12 @@ chmod +x /usr/local/bin/docker-compose
   ```
 docker-compose version
 ```
-5. Execute your Docker Compose command:
 
-  ```
-docker-compose -f four-peer-ca.yaml up
-```
+## Docker Toolbox
+
+If you are running any version of Windows that is not Windows 10, there is no native support for Docker. In this case you must install [Docker Toolbox](https://www.docker.com/products/docker-toolbox). The Docker Toolbox is an installer to quickly and easily install and setup a Docker environment on your computer.  Docker Toolbox installs a VirtualBox on your machine with Docker 1.12 and Docker Compose in a "default" VM. You will not see the VM until you start the VirtualBox. You can run all Docker commands and Docker Compose commands from the toolbox as if you were running them on the command line. Once you are in the toolbox, it is the same experience as if you were running on a Linux machine with Docker & Docker Compose installed.
+
+If you need to retrieve an IP address for one of your peers, use the `docker inspect` command as described in the Helpful Docker Commands section at the bottom of this page.
 
 ## Pulling the images
 
@@ -61,7 +63,7 @@ docker-compose -f four-peer-ca.yaml up
 
 ## Getting started and using Docker Compose
 
-1. The docker compose files and configurations are located in GitHub.  If you do not have Git installed, download the appropriate [Git client](https://git-scm.com/downloads) for your OS.  Now clone the repository:
+1. The Docker Compose files and configurations are located in GitHub.  If you do not have Git installed, download the appropriate [Git client](https://git-scm.com/downloads) for your OS.  Now clone the repository:
 
    ```
 git clone https://github.com/IBM-Blockchain/fabric-images.git
@@ -140,9 +142,9 @@ This will take a few minutes the first time this command is issued; the images h
 
 You have the option of either deploying sample chaincode to your blockchain network, or developing your own original code.  If you are interested in developing some organic Go code, use the IBM-Blockchain [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) repository as a starting point.  This repo will teach you the major chaincode functions, and then guide you through the construction and implementation of a simple piece of Go code.  Once constructed, you will compile your code, deploy it to a blockchain network, and then issue invocation transactions.  If you are already familiar with the basic tenets of Hyperledger fabric and chaincode, then proceed to the next section.  
 
-## Hyperledger fabric v0.6 release notes
+## Hyperledger fabric v0.6.1-preview release notes
 
-There are new features available and several programming changes have been implemented during the migration from the Hyperledger fabric v0.5 codebase to v0.6.  You will need to update your code accordingly in order for your chaincode to properly function against a v0.6 Hyperledger fabric network.  See the [migration notes](https://github.com/IBM-Blockchain/fabric-images/blob/master/v0.6_migration.md) for more details on the programming changes.    
+There are new features available and several programming changes have been implemented during the migration from the Hyperledger fabric v0.5-developer-preview codebase to v0.6.1-preview.  You will need to update your code accordingly in order for your chaincode to properly function against a v0.6.1-preview Hyperledger fabric network.  See the [migration notes](https://github.com/IBM-Blockchain/fabric-images/blob/master/v0.6_migration.md) for more details on the programming changes.    
 
 ## Testing and verifying your local network
 
