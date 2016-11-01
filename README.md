@@ -55,7 +55,25 @@ docker-compose version
 
 If you are running any version of Windows that is not Windows 10, there is no native support for Docker. In this case you must install [Docker Toolbox](https://www.docker.com/products/docker-toolbox). The Docker Toolbox is an installer to quickly and easily install and setup a Docker environment on your computer.  Docker Toolbox installs a VirtualBox on your machine with Docker 1.12 and Docker Compose in a "default" VM. You will not see the VM until you start the VirtualBox. You can run all Docker commands and Docker Compose commands from the toolbox as if you were running them on the command line. Once you are in the toolbox, it is the same experience as if you were running on a Linux machine with Docker & Docker Compose installed.
 
+Start up the default Docker host by clicking on the Docker Quickstart Terminal.
+
+It will open a new terminal window and initialize the Docker host. Once the startup process is complete, you will see the Docker whale together with the IP address of the Docker host, as shown below. In this example the IP address of the Docker host is 192.168.99.100. Take note of this IP address as you will need it later to connect to your Docker containers.
+
 If you need to retrieve an IP address for one of your peers, use the `docker inspect` command as described in the Helpful Docker Commands section at the bottom of this page.
+
+```
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+        /"""""""""""""""""\___/ ===
+   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+        \______ o           __/
+         \    \         __/
+          \____\_______/
+
+docker is configured to use the default machine with IP 192.168.99.100
+For help getting started, check out the docs at https://docs.docker.com
+```
 
 ## Pulling the images
 
