@@ -55,9 +55,7 @@ docker-compose version
 
 If you are running any version of Windows that is not Windows 10, there is no native support for Docker. In this case you must install [Docker Toolbox](https://www.docker.com/products/docker-toolbox). The Docker Toolbox is an installer to quickly and easily install and setup a Docker environment on your computer.  Docker Toolbox installs a VirtualBox on your machine with Docker 1.12 and Docker Compose in a "default" VM. You will not see the VM until you start the VirtualBox. You can run all Docker commands and Docker Compose commands from the toolbox as if you were running them on the command line. Once you are in the toolbox, it is the same experience as if you were running on a Linux machine with Docker & Docker Compose installed.
 
-Start up the default Docker host by clicking on the Docker Quickstart Terminal.
-
-It will open a new terminal window and initialize the Docker host. Once the startup process is complete, you will see the Docker whale together with the IP address of the Docker host, as shown below. In this example the IP address of the Docker host is 192.168.99.100. Take note of this IP address as you will need it later to connect to your Docker containers.
+Start up the default Docker host by clicking on the Docker Quickstart Terminal. It will open a new terminal window and initialize the Docker host. Once the startup process is complete, you will see the Docker whale together with the IP address of the Docker host, as shown below. In this example the IP address of the Docker host is 192.168.99.100. Take note of this IP address as you will need it later to connect to your Docker containers.
 
 If you need to retrieve an IP address for one of your peers, use the `docker inspect` command as described in the Helpful Docker Commands section at the bottom of this page.
 
@@ -160,9 +158,9 @@ This will take a few minutes the first time this command is issued; the images h
 
 You have the option of either deploying sample chaincode to your blockchain network, or developing your own original code.  If you are interested in developing some organic Go code, use the IBM-Blockchain [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) repository as a starting point.  This repo will teach you the major chaincode functions, and then guide you through the construction and implementation of a simple piece of Go code.  Once constructed, you will compile your code, deploy it to a blockchain network, and then issue invocation transactions.  If you are already familiar with the basic tenets of Hyperledger fabric and chaincode, then proceed to the next section.  
 
-## Hyperledger fabric v0.6.1-preview release notes
+## Hyperledger fabric v0.6 release notes
 
-There are new features available and several programming changes have been implemented during the migration from the Hyperledger fabric v0.5-developer-preview codebase to v0.6.1-preview.  You will need to update your code accordingly in order for your chaincode to properly function against a v0.6.1-preview Hyperledger fabric network.  See the [migration notes](https://github.com/IBM-Blockchain/fabric-images/blob/master/v0.6_migration.md) for more details on the programming changes.    
+There are new features available and several programming changes have been implemented during the migration from the Hyperledger fabric v0.5-developer-preview codebase to v0.6.  You will need to update your code accordingly in order for your chaincode to properly function against a v0.6 Hyperledger fabric network.  See the [migration notes](https://github.com/IBM-Blockchain/fabric-images/blob/master/v0.6_migration.md) for more details on the programming changes.    
 
 ## Testing and verifying your local network
 
