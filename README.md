@@ -8,7 +8,7 @@ The architecture behind IBM Blockchain is the Linux Foundation's Hyperledger Pro
 
 ## Using your Docker images
 
-These images provide you with a self-contained local blockchain environment running on Hyperledger fabric v0.6.1-preview code.  There are two configurations available: 1) a single node + CA (certificate authority) network; and 2) a four node + CA network.  The images and configurations have been tested and verified by IBM development, and should not be altered.  IBM offers support for both configurations.  Please see the **Getting Support** section at the bottom of the page for more information.  
+These images provide you with a self-contained local blockchain environment running on Hyperledger fabric v0.6 code.  There are two configurations available: 1) a single node + CA (certificate authority) network; and 2) a four node + CA network.  The images and configurations have been tested and verified by IBM development, and should not be altered.  IBM offers support for both configurations.  Please see the **Getting Support** section at the bottom of the page for more information.  
 
 ## Platform
 
