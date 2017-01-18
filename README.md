@@ -1,6 +1,6 @@
 # Fabric Images
 
-This repository contains the IBM-signed Docker images and Docker Compose files for running the Hyperledger fabric.  These images have been tested for functionality, stability and performance across the available platforms, and a dedicated support team within IBM is available to help resolve code defects or configuration issues for networks running supported configurations against Hyperledger fabric code.  Visit the [IBM Blockchain Support](http://www.ibm.com/blockchain/contact-expert.html) page for more information on obtaining support for your local network.
+This repository contains the IBM-signed Docker images and Docker Compose files for running Hyperledger fabric code.  These images have been tested for functionality, stability and performance across the available platforms, and a dedicated support team within IBM is available to help resolve code defects or configuration issues for networks running supported configurations against Hyperledger fabric code.  Visit the [IBM Blockchain Support](http://www.ibm.com/blockchain/contact-expert.html) page for more information on obtaining support for your local network.
 
 ## Disclaimer
 
@@ -31,7 +31,8 @@ then
 pip install docker-compose
 ```
 
-If you are running your Docker containers within a vagrant environment and need to upgrade your Docker Compose version:
+You do not need a vagrant environment in order to run your Docker images.  The images will function on Windows, Linux, and Mac, assuming that the prerequisite Docker versions have been properly installed.  However, if you choose to run your Docker containers within vagrant and need to upgrade your Docker Compose version:
+
 
 1. Login to root in vagrant
 2. Ensure you have the [cURL](https://curl.haxx.se/download.html) tool installed.  Then:
@@ -49,10 +50,27 @@ chmod +x /usr/local/bin/docker-compose
   ```
 docker-compose version
 ```
-5. Execute your Docker Compose command:
 
-  ```
-docker-compose -f four-peer-ca.yaml up
+## Docker Toolbox
+
+If you are running any version of Windows that is not Windows 10, there is no native support for Docker. In this case you must install [Docker Toolbox](https://www.docker.com/products/docker-toolbox). The Docker Toolbox is an installer to quickly and easily install and setup a Docker environment on your computer.  Docker Toolbox installs a VirtualBox on your machine with Docker 1.12 and Docker Compose in a "default" VM. You will not see the VM until you start the VirtualBox. You can run all Docker commands and Docker Compose commands from the toolbox as if you were running them on the command line. Once you are in the toolbox, it is the same experience as if you were running on a Linux machine with Docker & Docker Compose installed.
+
+Start up the default Docker host by clicking on the Docker Quickstart Terminal. It will open a new terminal window and initialize the Docker host. Once the startup process is complete, you will see the Docker whale together with the IP address of the Docker host, as shown below. In this example the IP address of the Docker host is 192.168.99.100. Take note of this IP address as you will need it later to connect to your Docker containers.
+
+If you need to retrieve an IP address for one of your peers, use the `docker inspect` command as described in the Helpful Docker Commands section at the bottom of this page.
+
+```
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+        /"""""""""""""""""\___/ ===
+   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+        \______ o           __/
+         \    \         __/
+          \____\_______/
+
+docker is configured to use the default machine with IP 192.168.99.100
+For help getting started, check out the docs at https://docs.docker.com
 ```
 
 ## Pulling the images
@@ -61,7 +79,7 @@ docker-compose -f four-peer-ca.yaml up
 
 ## Getting started and using Docker Compose
 
-1. The docker compose files and configurations are located in GitHub.  If you do not have Git installed, download the appropriate [Git client](https://git-scm.com/downloads) for your OS.  Now clone the repository:
+1. The Docker Compose files and configurations are located in GitHub.  If you do not have Git installed, download the appropriate [Git client](https://git-scm.com/downloads) for your OS.  Now clone the repository:
 
    ```
 git clone https://github.com/IBM-Blockchain/fabric-images.git
@@ -142,7 +160,7 @@ You have the option of either deploying sample chaincode to your blockchain netw
 
 ## Hyperledger fabric v0.6 release notes
 
-There are new features available and several programming changes have been implemented during the migration from the Hyperledger fabric v0.5 codebase to v0.6.  You will need to update your code accordingly in order for your chaincode to properly function against a v0.6 Hyperledger fabric network.  See the [migration notes](https://github.com/IBM-Blockchain/fabric-images/blob/master/v0.6_migration.md) for more details on the programming changes.    
+There are new features available and several programming changes have been implemented during the migration from the Hyperledger fabric v0.5-developer-preview codebase to v0.6.  You will need to update your code accordingly in order for your chaincode to properly function against a v0.6 Hyperledger fabric network.  See the [migration notes](https://github.com/IBM-Blockchain/fabric-images/blob/master/v0.6_migration.md) for more details on the programming changes.    
 
 ## Testing and verifying your local network
 
