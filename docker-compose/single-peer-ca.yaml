@@ -2,7 +2,7 @@ version: '2'
 services:
   baseimage:
     build: ./baseimage
-    image: hyperledger/fabric-baseimage:latest
+    image: hyperledger/fabric-baseimage
 
   membersrvc:
     image: ibmblockchain/fabric-membersrvc:${ARCH_TAG}
