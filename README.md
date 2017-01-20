@@ -91,8 +91,8 @@ cd fabric-images/docker-compose
 ```
 3. Set the environment by executing the setenv.sh script:
 
-   ```
-. setenv.sh
+```
+./setenv.sh
 ```
 4. If you wish to configure your network by changing environment variables or customizing port mapping, skip below to the __Configuration Considerations__ section.  If you want to run with the default settings, proceed to the next step.
 
