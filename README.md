@@ -23,11 +23,11 @@ The default configurations for each network (single node and four node) have bee
 Ensure that you have Docker for [Mac](https://docs.docker.com/engine/installation/mac/),  [Windows](https://docs.docker.com/engine/installation/windows/) or [Linux](https://docs.docker.com/engine/installation/#/on-linux) 1.12 or higher properly installed on your machine.  You must also have [Docker Compose](https://docs.docker.com/compose/install/) 1.7 or higher installed.
 
 If you are running on Power and want to install the Docker prerequisites from your terminal:
-  ```
+```
 apt-get install docker.io
 ```
 then
-  ```
+```
 pip install docker-compose
 ```
 
@@ -37,17 +37,17 @@ You do not need a vagrant environment in order to run your Docker images.  The i
 1. Login to root in vagrant
 2. Ensure you have the [cURL](https://curl.haxx.se/download.html) tool installed.  Then:
 
-  ```
+```
 curl -L "https://github.com/docker/compose/releases/download/1.8.0/docker-compose-$(uname -s)-$(uname -m)" > /usr/local/bin/docker-compose
 ```
 3. Make the file an executable:
 
-  ```
+```
 chmod +x /usr/local/bin/docker-compose
 ```
 4. Check version:
 
-  ```
+```
 docker-compose version
 ```
 
@@ -81,24 +81,24 @@ For help getting started, check out the docs at https://docs.docker.com
 
 1. The Docker Compose files and configurations are located in GitHub.  If you do not have Git installed, download the appropriate [Git client](https://git-scm.com/downloads) for your OS.  Now clone the repository:
 
-   ```
+```
 git clone https://github.com/IBM-Blockchain/fabric-images.git
 ```
 2. Go into the docker-compose directory:
 
-   ```
+```
 cd fabric-images/docker-compose
 ```
 3. Set the environment by executing the setenv.sh script:
 
-   ```
+```
 . setenv.sh
 ```
 4. If you wish to configure your network by changing environment variables or customizing port mapping, skip below to the __Configuration Considerations__ section.  If you want to run with the default settings, proceed to the next step.
 
 5. Run one of the two docker compose files, single-peer-ca.yaml or four-peer-ca.yaml.  For example:
 
-   ```
+```
 docker-compose -f four-peer-ca.yaml up
 ```  
 
@@ -213,52 +213,52 @@ peer chaincode query -u test_user0 -n ee5b24a1f17c356dd5f6e37307922e39ddba12e5d2
 
 1. View running containers:
 
-  ```
+```
 docker ps
 ```
 2. View all containers (active and non-active):
 
-  ```
+```
 docker ps -a
 ```
 3. Stop all Docker containers:
 
-  ```
+```
 docker stop $(docker ps -a -q)
 ```
 4. Remove all containers.  Adding the `-f` will issue a "force" removal:
 
-  ```
+```
 docker rm -f $(docker ps -aq)
 ```
 5. Remove all images:
 
-  ```
+```
 docker rmi -f $(docker images -q)
 ```
 6. Remove all images except for hyperledger/fabric-baseimage:
 
-  ```
+```
 docker rmi $(docker images | grep -v 'hyperledger/fabric-baseimage:latest' | awk {'print $3'})
 ```
 7. Start a container:
 
-  ```
+```
 docker start <containerID>
 ```
 8. Stop a containerID:
 
-  ```
+```
 docker stop <containerID>
 ```
 9. View network settings for a specific container:
 
-   ```
+```
 docker inspect <containerID>
 ```
 10. View logs for a specific containerID:
 
-  ```
+```
 docker logs -f <containerID>
 ```
 
